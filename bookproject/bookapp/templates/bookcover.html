@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Back Cover</title>
+<style>
+  body { margin:0; background:#222; font-family:Georgia,serif; }
+  .cover { width:420px; min-height:600px; margin:30px auto;
+           background:linear-gradient(#1b2a49,#0d1626);
+           color:#f5f0e6; padding:30px; box-sizing:border-box;
+           box-shadow:0 0 20px #000; }
+  h1 { color:#f4c542; text-align:center; font-size:26px; }
+  .quote { font-style:italic; text-align:center; margin:20px 0; }
+  p { line-height:1.6; text-align:justify; }
+  .author { text-align:center; margin-top:25px; }
+  .author img { width:90px; border-radius:50%; border:3px solid #f4c542; }
+  .footer { display:flex; justify-content:space-between;
+            align-items:center; margin-top:30px; font-size:13px; }
+  .footer img { width:80px; background:#fff; padding:4px; }
+</style>
+</head>
+<body>
+<div class="cover">
+  <h1>The Silent Horizon</h1>
+  <div class="quote">"A gripping journey you won't put down."</div>
+  <p>When a young sailor discovers a map hidden in an old lighthouse,
+  he sets out on a voyage that will test his courage and change
+  his life forever.</p>
+  <div class="author">
+    <img src="{% static 'author.jpg' %}" alt="Author">
+    <p>About the Author</p>
+  </div>
+  <div class="footer">
+    <span>Price: ₹299<br>ISBN 978-1-23456-789-0</span>
+    <img src="{% static 'barcode.png' %}" alt="Barcode">
+  </div>
+</div>
+</body>
+</html>   
